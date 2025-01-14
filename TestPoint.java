@@ -6,6 +6,10 @@ public class TestPoint {
         Point p4 = new Point(3,-10);
         Point p5 = new Point(3,10);
         Point p6 = new Point(6,8);
+        System.out.println("Testing manhattanDistance: ");
+        System.out.println("p2 to p3 " + p2.manhattanDistance(p3));
+        System.out.println("p3 to p4 " + p3.manhattanDistance(p4));
+
 
          
 
