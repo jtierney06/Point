@@ -2,7 +2,7 @@ public class Line2D {
     private Point p1;
     private Point p2;
 
-  
+    
     public Line2D(Point p1, Point p2) {
         this.p1 = p1;
         this.p2 = p2;
@@ -13,19 +13,20 @@ public class Line2D {
         this(new Point(x1, y1), new Point(x2, y2));
     }
 
-
+   
     public Point getP1() {
         return p1;
     }
 
- 
+   
     public Point getP2() {
         return p2;
     }
 
    
+    @Override
     public String toString() {
-        return "[" + p1 + ", " + p2 + "]";
+        return "[(" + p1.getX() + ", " + p1.getY() + "), (" + p2.getX() + ", " + p2.getY() + ")]";
     }
 
    
@@ -36,7 +37,8 @@ public class Line2D {
         return (double) (p2.getY() - p1.getY()) / (p2.getX() - p1.getX());
     }
 
+    
     public boolean isCollinear(Point p) {
-        return p1.isCollinear(p2, p);
+        return p1.isCollinear(p2, p); 
     }
 }
